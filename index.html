@@ -13,7 +13,7 @@
     }
 
     .ticket {
-      background: #e2221a;
+      background: #d72a1a;
       color: white;
       border-radius: 12px;
       padding: 16px;
@@ -97,13 +97,64 @@
       flex: 1;
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const title = urlParams.get('title');
+        const rating = urlParams.get('rating')
+        console.log(title);
+
+        const label = document.getElementById("titlelabel");
+        const badge = document.getElementById("rating-badge");
+        if (title && label) {
+        label.insertAdjacentText("afterbegin", title + " ");
+        }
+
+        if (rating && badge) {
+
+      switch (rating.toUpperCase()) {
+        case "G":
+          badge.style.background = "green";
+          badge.style.color = "white";
+          badge.textContent = "G";
+          break;
+        case "PG":
+          badge.style.background = "gold";
+          badge.style.color = "black";
+          badge.textContent = "PG";
+          break;
+        case "M":
+          badge.style.background = "blue";
+          badge.style.color = "white";
+          badge.textContent = "M";
+          break;
+        case "MA15":
+        case "MA15+":
+          badge.style.background = "red";
+          badge.style.color = "white";
+          badge.textContent = "MA15+";
+          break;
+        case "R18":
+        case "R18+":
+          badge.style.background = "red";
+          badge.style.color = "white";
+          badge.textContent = "R18+";
+          break;
+        default:
+          badge.style.background = "gray";
+          badge.style.color = "white";
+          break;
+      }
+    }
+    })
+        
+  </script>
 </head>
 <body>
 
   <div class="ticket">
-    <h1>EVENT</h1>
-    <div>EVENT | ORIGINAL</div>
-    <h2>Until Dawn <span style="background: white; color: red; padding: 1px 4px; border-radius: 4px;">MA15+</span></h2>
+    <img src="ticket-top.png" align="left" height="30px"></img><br><br>
+    <h2 id="titlelabel"><span id="rating-badge" style="border: 1px solid white; border-radius: 0; padding: 1px 4px;box-shadow: 1px 1px 3px rgba(0,0,0,0.3);">MA15+</span></h2>
 
     <div class="label">
       PROCEED TO<br>CINEMA 3
