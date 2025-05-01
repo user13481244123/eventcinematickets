@@ -3,68 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <title>Event Ticket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
       background: #72b626;
       margin: 0;
-      padding: 20px;
+      padding: 10px;
     }
 
     .ticket {
       background: #e2221a;
       color: white;
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 400px;
+      border-radius: 12px;
+      padding: 16px;
+      max-width: 340px;
       margin: 0 auto;
       text-align: center;
     }
 
     .ticket h1 {
+      font-size: 20px;
       margin: 0;
-      font-size: 24px;
+    }
+
+    .ticket h2 {
+      font-size: 16px;
+      margin: 8px 0;
     }
 
     .label {
       background: white;
       color: black;
-      margin: 20px auto;
-      padding: 15px;
-      width: 70%;
+      padding: 10px;
       border-radius: 10px;
       font-weight: bold;
+      margin: 16px 0;
+    }
+
+    .label div {
+      margin-top: 6px;
+      font-size: 14px;
     }
 
     .info-row {
       display: flex;
-      justify-content: space-around;
-      margin: 15px 0;
-    }
-
-    .info-column {
-      text-align: center;
+      justify-content: space-between;
+      margin: 14px 0;
+      font-size: 14px;
     }
 
     .footer {
-      margin-top: 20px;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    h3 {
       font-size: 14px;
+      margin-top: 18px;
     }
 
     .actions {
       display: flex;
-      justify-content: space-around;
-      margin-top: 30px;
+      gap: 8px;
+      margin-top: 10px;
+      flex-direction: column;
     }
 
     .action-box {
       background: #fff;
       color: black;
-      padding: 15px;
-      width: 45%;
-      border-radius: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 13px;
       font-weight: bold;
-      cursor: pointer;
       border: 1px solid #ddd;
     }
 
@@ -76,48 +88,32 @@
       display: flex;
       justify-content: space-around;
       border-top: 1px solid #ddd;
-      padding: 10px 0;
+      padding: 6px 0;
+      font-size: 10px;
     }
 
     .nav-item {
       text-align: center;
-      font-size: 12px;
-    }
-
-    .topnav {
-        background-color: #333;
-        overflow: hidden;
+      flex: 1;
     }
   </style>
 </head>
 <body>
 
-    <div class="topnav">
-
-    </div>
   <div class="ticket">
-    <img src="event-logo.png" height="40px"></img>
-    <h1>EVENT | ORIGINAL</h1>
-    <h2>Until Dawn <span style="background: white; color: red; padding: 2px 5px; border-radius: 4px;">MA15+</span></h2>
+    <h1>EVENT</h1>
+    <div>EVENT | ORIGINAL</div>
+    <h2>Until Dawn <span style="background: white; color: red; padding: 1px 4px; border-radius: 4px;">MA15+</span></h2>
 
     <div class="label">
-      PROCEED TO<br>CINEMA 3<br>
-      <div style="margin-top: 10px;">&#128100; × 1</div>
+      PROCEED TO<br>CINEMA 3
+      <div>&#128100; × 1</div>
     </div>
 
     <div class="info-row">
-      <div class="info-column">
-        <div>Cinema</div>
-        <strong>3</strong>
-      </div>
-      <div class="info-column">
-        <div>Seat</div>
-        <strong>K4</strong>
-      </div>
-      <div class="info-column">
-        <div>Time</div>
-        <strong>3:30PM</strong>
-      </div>
+      <div><strong>Cinema</strong><br>3</div>
+      <div><strong>Seat</strong><br>K4</div>
+      <div><strong>Time</strong><br>3:30PM</div>
     </div>
 
     <div class="footer">
@@ -126,7 +122,7 @@
       1x Student
     </div>
 
-    <h3 style="margin-top: 30px;">MORE ACTIONS</h3>
+    <h3>MORE ACTIONS</h3>
 
     <div class="actions">
       <div class="action-box">ADD TO MOBILE WALLET</div>
